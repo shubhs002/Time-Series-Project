@@ -38,7 +38,7 @@ adf.test(snp_qtrly$snp_ts.Close, alternative = c("stationary"), k=6)
 # shows that the series has a stochastic trend
 
 ## Taking 1st order difference
-dclose=diff(log(snp_qtrly$snp_ts.Close))[-1,]
+dclose=diff(snp_qtrly$snp_ts.Close)[-1,]
 
 adf.test(dclose, alternative = c("stationary"), k=6)
 # now it is stationary
